@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Coco Note</string>
+
+    <string name="label_list_notes">Semua Catatan</string>
+    <string name="image">image resource</string>
+    <string name="fab">fab</string>
+    <string name="write_note">Tulis Catatan</string>
+    <string name="title">Judul</string>
+    <string name="note">Catatan</string>
+    <string name="lbl_title_not_is_empty">Tidak ada catatan</string>
+    <string name="lbl_desc_not_is_empty">Ketuk tombol Tambah untuk membuat catatan.</string>
+    <string name="save_failed">Gagal Menyimpan</string>
+    <string name="save_failed_description">Catanan gagal disimpan karena tidak ada judul atau deskripsi.</string>
+    <string name="close">Tutup</string>
+    <string name="delete_confirm">Konfirmasi Hapus</string>
+    <string name="delete_confirm_description">Apakah Anda yakin ingin menghapus note ini?</string>
+    <string name="delete">Hapus</string>
+    <string name="cancel">Batal</string>
+</resources>

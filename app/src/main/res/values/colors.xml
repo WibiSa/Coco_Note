@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF101010</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_blue">#FFF2F7FF</color>
+    <color name="white_yellow">#FFFEF6E5</color>
+    <color name="white_green">#FFE3FEE5</color>
+
+    <array name="random_colors">
+        <item>@color/white_blue</item>
+        <item>@color/white_yellow</item>
+        <item>@color/white_green</item>
+    </array>
+</resources>
