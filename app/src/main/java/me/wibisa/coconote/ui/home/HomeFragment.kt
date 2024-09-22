@@ -50,7 +50,10 @@ class HomeFragment : Fragment() {
     private fun componentUiSetup() {
 
         binding.fabCreateNewNote.setOnClickListener {
-            mainNavController?.navigate(R.id.action_homeFragment_to_writeNoteFragment)
+            val bundle = bundleOf(
+                Constant.NEW_NOTE to true
+            )
+            mainNavController?.navigate(R.id.action_homeFragment_to_writeNoteFragment, bundle)
         }
 
         adapter = NoteAdapter(
@@ -74,6 +77,7 @@ class HomeFragment : Fragment() {
                 viewModel.listOfNoteUiState.collect { noteList ->
                     if (noteList.isEmpty()) binding.messageIsEmpty.show() else binding.messageIsEmpty.gone()
                     adapter.submitList(noteList)
+                    binding.rvNotes.layoutManager?.smoothScrollToPosition(binding.rvNotes, null, 0)
                 }
             }
         }

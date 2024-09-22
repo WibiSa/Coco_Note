@@ -42,7 +42,7 @@ Coco Note is a simple, user-friendly note-taking application that allows users t
 - Minimum Android SDK version 26
 
 ## Installation Steps
-1. Clone this repository: 
+1. Clone this repository: `git clone https://github.com/WibiSa/Coco_Note.git`.
 2. Open the project in Android Studio.
 3. Sync the project with Gradle. 
 4. Run the app on an emulator or physical device.

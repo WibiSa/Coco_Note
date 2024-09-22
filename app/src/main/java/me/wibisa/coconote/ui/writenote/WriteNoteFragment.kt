@@ -65,7 +65,7 @@ class WriteNoteFragment : Fragment() {
     private fun handleOnSavePressed() {
         val title = binding.edTitle.text.toString()
         val description = binding.edDescription.text.toString()
-        val id = arguments?.getInt(Constant.ID)
+        val id = arguments?.getString(Constant.ID)
 
         if (title.isNotEmpty() || description.isNotEmpty()) {
             if (id != null) {
@@ -79,13 +79,14 @@ class WriteNoteFragment : Fragment() {
     }
 
     private fun handleOnBackOrClosePressed() {
+        val isNewNote = arguments?.getBoolean(Constant.NEW_NOTE)
         val titleOld = arguments?.getString(Constant.TITLE)
         val descriptionOld = arguments?.getString(Constant.DESCRIPTION)
         val titleNew = binding.edTitle.text.toString()
         val descriptionNew = binding.edDescription.text.toString()
-        val id = arguments?.getInt(Constant.ID)
+        val id = arguments?.getString(Constant.ID)
 
-        if (titleOld.equals(titleNew) && descriptionOld.equals(descriptionNew)) {
+        if (isNewNote == true || (titleOld.equals(titleNew) && descriptionOld.equals(descriptionNew))) {
             mainNavController?.popBackStack()
         } else {
             if (titleNew.isNotEmpty() || descriptionNew.isNotEmpty()) {
@@ -94,8 +95,8 @@ class WriteNoteFragment : Fragment() {
                 } else {
                     createNote()
                 }
+                mainNavController?.popBackStack()
             }
-            mainNavController?.popBackStack()
         }
     }
 
